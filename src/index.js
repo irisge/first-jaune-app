@@ -21,6 +21,8 @@ app.get('/api/skill', skillController.read);
 app.put('/api/skill/:id', skillController.update);
 app.delete('/api/skill/:id', skillController.delete);
 
+app.post('/api/wilder-skill', wilderController.addSkill);
+
 app.get('*', (req, res) => {
   res.status(404).json('Page not found!');
 });
